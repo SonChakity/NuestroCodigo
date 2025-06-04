@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{ tituloPost }} – FinanciaPro Pagos</title>
+  <meta name="description" content="{{ descripcionPost }}" />
+  <link rel="stylesheet" href="/css/styles.css" />
+</head>
+<body class="flex flex-col min-h-screen">
+  <!-- Navbar -->
+  <!-- Copiar navbar.html -->
+
+  <main class="container mx-auto px-4 py-16">
+    <article class="prose lg:prose-xl mx-auto">
+      <h1>{{ tituloPost }}</h1>
+      <p class="text-gray-500 text-sm">{{ fechaPublicacion }} · por {{ autor }}</p>
+      <div>
+        {{ contenidoHTML }}
+      </div>
+    </article>
+  </main>
+
+  <!-- Footer -->
+  <!-- Copiar footer.html -->
+
+  <script src="/js/main.js"></script>
+</body>
+</html>

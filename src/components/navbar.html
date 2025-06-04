@@ -1,0 +1,37 @@
+<header class="bg-white shadow">
+  <nav class="container mx-auto px-4 py-3 flex justify-between items-center">
+    <a href="index.html" class="text-2xl font-bold text-accent">FinanciaPro</a>
+    <ul class="hidden md:flex space-x-6 text-gray-700">
+      <li><a href="index.html" class="hover:text-accent">Inicio</a></li>
+      <li><a href="servicios.html" class="hover:text-accent">Servicios</a></li>
+      <li><a href="tarifas.html" class="hover:text-accent">Tarifas</a></li>
+      <li><a href="casos-exito.html" class="hover:text-accent">Casos de Éxito</a></li>
+      <li><a href="blog.html" class="hover:text-accent">Blog</a></li>
+      <li><a href="contacto.html" class="hover:text-accent">Contacto</a></li>
+    </ul>
+    <button id="btn-menu" class="md:hidden text-gray-700 focus:outline-none">
+      <!-- Icono hamburguesa -->
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
+           viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round"
+           stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+    </button>
+  </nav>
+  <!-- Menú móvil desplegable -->
+  <div id="menu-mobile" class="hidden bg-white shadow-md md:hidden">
+    <ul class="flex flex-col px-4 py-2 space-y-2 text-gray-700">
+      <li><a href="index.html" class="block hover:text-accent">Inicio</a></li>
+      <li><a href="servicios.html" class="block hover:text-accent">Servicios</a></li>
+      <li><a href="tarifas.html" class="block hover:text-accent">Tarifas</a></li>
+      <li><a href="casos-exito.html" class="block hover:text-accent">Casos de Éxito</a></li>
+      <li><a href="blog.html" class="block hover:text-accent">Blog</a></li>
+      <li><a href="contacto.html" class="block hover:text-accent">Contacto</a></li>
+    </ul>
+  </div>
+</header>
+
+<script>
+  // Script para desplegar menú móvil
+  document.getElementById('btn-menu').addEventListener('click', () => {
+    document.getElementById('menu-mobile').classList.toggle('hidden');
+  });
+</script>

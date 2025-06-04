@@ -1,0 +1,33 @@
+{
+  "name": "financiapro-pagos",
+  "version": "1.0.0",
+  "description": "Sitio web corporativo para FinanciaPro Pagos (empresa de procesamiento de pagos ficticia).",
+  "main": "server/app.js",
+  "scripts": {
+    "start": "node server/app.js",
+    "dev": "nodemon server/app.js",
+    "build:css": "postcss src/input.css -o public/css/styles.css",
+    "watch:css": "npx tailwindcss -i ./src/input.css -o ./public/css/styles.css --watch"
+  },
+  "author": "FinanciaPro",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "helmet": "^6.0.1",
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "csurf": "^1.11.0",
+    "dotenv": "^16.0.3",
+    "mongodb": "^5.6.0",
+    "mongoose": "^7.0.5",
+    "nodemailer": "^6.9.3",
+    "express-validator": "^7.0.1",
+    "express-rate-limit": "^7.0.0"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.2",
+    "postcss": "^8.4.21",
+    "autoprefixer": "^10.4.13",
+    "nodemon": "^2.0.22"
+  }
+}

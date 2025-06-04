@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Servicios – FinanciaPro Pagos</title>
+  <meta name="description" content="Conoce todos los servicios de FinanciaPro Pagos: pasarela de pagos, TPV virtual, prevención de fraude y API de integración." />
+  <link rel="stylesheet" href="/css/styles.css" />
+</head>
+<body class="flex flex-col min-h-screen">
+  <!-- Navbar -->
+  <!-- Copiar aquí navbar.html -->
+
+  <main class="pb-20">
+    <section id="pasarela" class="container mx-auto px-4 py-16">
+      <h2 class="text-3xl font-bold text-gray-800 mb-4">Pasarela de Pagos Web</h2>
+      <p class="text-gray-600 mb-6">Integra nuestra pasarela de pagos en minutos, acepta tarjetas, monederos electrónicos y más.</p>
+      <form id="form-pasarela" action="/api/contacto" method="POST" class="max-w-md mx-auto space-y-4">
+        <input type="hidden" name="servicio" value="Pasarela de Pagos Web">
+        <div>
+          <label for="nombre-pasarela" class="block text-gray-700">Nombre:</label>
+          <input id="nombre-pasarela" name="nombre" type="text" class="input" required>
+        </div>
+        <div>
+          <label for="email-pasarela" class="block text-gray-700">Email:</label>
+          <input id="email-pasarela" name="email" type="email" class="input" required>
+        </div>
+        <div>
+          <label for="telefono-pasarela" class="block text-gray-700">Teléfono:</label>
+          <input id="telefono-pasarela" name="telefono" type="tel" class="input">
+        </div>
+        <div>
+          <label for="mensaje-pasarela" class="block text-gray-700">Comentarios:</label>
+          <textarea id="mensaje-pasarela" name="mensaje" rows="4" class="input" required></textarea>
+        </div>
+        <button type="submit" class="btn">Enviar consulta</button>
+      </form>
+    </section>
+
+    <hr class="border-gray-200">
+
+    <section id="tpv" class="container mx-auto px-4 py-16">
+      <h2 class="text-3xl font-bold text-gray-800 mb-4">TPV Virtual</h2>
+      <p class="text-gray-600 mb-6">Procesa pagos con tarjeta desde tu panel de control, sin necesidad de hardware adicional.</p>
+      <form id="form-tpv" action="/api/contacto" method="POST" class="max-w-md mx-auto space-y-4">
+        <input type="hidden" name="servicio" value="TPV Virtual">
+        <div>
+          <label for="nombre-tpv" class="block text-gray-700">Nombre:</label>
+          <input id="nombre-tpv" name="nombre" type="text" class="input" required>
+        </div>
+        <div>
+          <label for="email-tpv" class="block text-gray-700">Email:</label>
+          <input id="email-tpv" name="email" type="email" class="input" required>
+        </div>
+        <div>
+          <label for="telefono-tpv" class="block text-gray-700">Teléfono:</label>
+          <input id="telefono-tpv" name="telefono" type="tel" class="input">
+        </div>
+        <div>
+          <label for="mensaje-tpv" class="block text-gray-700">Comentarios:</label>
+          <textarea id="mensaje-tpv" name="mensaje" rows="4" class="input" required></textarea>
+        </div>
+        <button type="submit" class="btn">Enviar consulta</button>
+      </form>
+    </section>
+
+    <hr class="border-gray-200">
+
+    <section id="fraude" class="container mx-auto px-4 py-16">
+      <h2 class="text-3xl font-bold text-gray-800 mb-4">Prevención de Fraude</h2>
+      <p class="text-gray-600 mb-6">Filtros inteligentes para reducir devoluciones y rechazos, mantén protegidas tus transacciones.</p>
+      <form id="form-fraude" action="/api/contacto" method="POST" class="max-w-md mx-auto space-y-4">
+        <input type="hidden" name="servicio" value="Prevención de Fraude">
+        <div>
+          <label for="nombre-fraude" class="block text-gray-700">Nombre:</label>
+          <input id="nombre-fraude" name="nombre" type="text" class="input" required>
+        </div>
+        <div>
+          <label for="email-fraude" class="block text-gray-700">Email:</label>
+          <input id="email-fraude" name="email" type="email" class="input" required>
+        </div>
+        <div>
+          <label for="telefono-fraude" class="block text-gray-700">Teléfono:</label>
+          <input id="telefono-fraude" name="telefono" type="tel" class="input">
+        </div>
+        <div>
+          <label for="mensaje-fraude" class="block text-gray-700">Comentarios:</label>
+          <textarea id="mensaje-fraude" name="mensaje" rows="4" class="input" required></textarea>
+        </div>
+        <button type="submit" class="btn">Enviar consulta</button>
+      </form>
+    </section>
+
+    <hr class="border-gray-200">
+
+    <section id="api" class="container mx-auto px-4 py-16">
+      <h2 class="text-3xl font-bold text-gray-800 mb-4">API de Integración</h2>
+      <p class="text-gray-600 mb-6">Documentación completa para desarrolladores: integra tu tienda en pocos minutos.</p>
+      <form id="form-api" action="/api/contacto" method="POST" class="max-w-md mx-auto space-y-4">
+        <input type="hidden" name="servicio" value="API de Integración">
+        <div>
+          <label for="nombre-api" class="block text-gray-700">Nombre:</label>
+          <input id="nombre-api" name="nombre" type="text" class="input" required>
+        </div>
+        <div>
+          <label for="email-api" class="block text-gray-700">Email:</label>
+          <input id="email-api" name="email" type="email" class="input" required>
+        </div>
+        <div>
+          <label for="telefono-api" class="block text-gray-700">Teléfono:</label>
+          <input id="telefono-api" name="telefono" type="tel" class="input">
+        </div>
+        <div>
+          <label for="mensaje-api" class="block text-gray-700">Comentarios:</label>
+          <textarea id="mensaje-api" name="mensaje" rows="4" class="input" required></textarea>
+        </div>
+        <button type="submit" class="btn">Enviar consulta</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <!-- Copiar aquí footer.html -->
+
+  <script src="/js/main.js"></script>
+</body>
+</html>

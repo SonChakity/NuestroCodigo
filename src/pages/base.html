@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{ title }} – FinanciaPro Pagos</title>
+  <meta name="description" content="{{ description }}" />
+  <link rel="stylesheet" href="/css/styles.css" />
+</head>
+<body class="flex flex-col min-h-screen">
+
+  <!-- Navbar -->
+  <!-- Aquí inyectarás el contenido de src/components/navbar.html -->
+  {% include "../components/navbar.html" %}
+
+  <!-- Contenido principal -->
+  <main class="flex-grow">
+    {{ content }}
+  </main>
+
+  <!-- Footer -->
+  <!-- Aquí inyectarás el contenido de src/components/footer.html -->
+  {% include "../components/footer.html" %}
+
+</body>
+</html>

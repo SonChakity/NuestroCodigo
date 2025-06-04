@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Caso de Éxito – {{ clienteNombre }}</title>
+  <meta name="description" content="Detalle del caso de éxito de {{ clienteNombre }} con FinanciaPro Pagos." />
+  <link rel="stylesheet" href="/css/styles.css" />
+</head>
+<body class="flex flex-col min-h-screen">
+  <!-- Navbar -->
+  <!-- Copiar navbar.html -->
+
+  <main class="container mx-auto px-4 py-16">
+    <article class="prose lg:prose-xl mx-auto">
+      <h1>{{ clienteNombre }}</h1>
+      <h2 class="text-xl font-semibold text-gray-700">Desafío</h2>
+      <p>Descripción del problema inicial que tenía {{ clienteNombre }} antes de usar FinanciaPro Pagos.</p>
+
+      <h2 class="text-xl font-semibold text-gray-700">Solución</h2>
+      <p>Cómo implementamos nuestra pasarela de pagos y/o TPV virtual, y qué funcionalidades se activaron (prevención de fraude, API, etc.).</p>
+
+      <h2 class="text-xl font-semibold text-gray-700">Resultados</h2>
+      <ul>
+        <li>Reducción del 50% en fraudes.</li>
+        <li>Aumento del 30% en aprobación de transacciones.</li>
+        <li>Mejora en la experiencia de usuario y tiempos de carga.</li>
+      </ul>
+
+      <h2 class="text-xl font-semibold text-gray-700">Testimonio</h2>
+      <blockquote class="border-l-4 border-accent pl-4 italic">
+        “Desde que migramos a FinanciaPro Pagos, nuestras ventas en línea se dispararon y el índice de reclamos bajó drásticamente.” – <strong>{{ clienteNombre }}</strong>
+      </blockquote>
+    </article>
+  </main>
+
+  <!-- Footer -->
+  <!-- Copiar footer.html -->
+
+  <script src="/js/main.js"></script>
+</body>
+</html>

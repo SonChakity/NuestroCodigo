@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tarifas – FinanciaPro Pagos</title>
+  <meta name="description" content="Conoce nuestras tarifas transparentes: planes Básico, Avanzado y Empresarial para adaptarse a tu volumen de transacciones." />
+  <link rel="stylesheet" href="/css/styles.css" />
+</head>
+<body class="flex flex-col min-h-screen">
+  <!-- Navbar -->
+  <!-- Copiar aquí navbar.html -->
+
+  <main class="container mx-auto px-4 py-16">
+    <h2 class="text-3xl font-bold text-gray-800 text-center mb-8">Planes y Tarifas</h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <!-- Plan Básico -->
+      <div class="border rounded-lg shadow p-6 flex flex-col">
+        <h3 class="text-2xl font-semibold text-gray-800 mb-4">Básico</h3>
+        <p class="text-gray-600 mb-6">Para pequeños comercios que inician su presencia en línea.</p>
+        <ul class="mb-6 space-y-2">
+          <li>Comisión: 2.5% + $0.30/tx</li>
+          <li>Sin costo mensual</li>
+          <li>Soporte por correo</li>
+          <li>TPV Virtual básico</li>
+        </ul>
+        <button data-plan="Básico" class="btn mt-auto" id="btn-contratar-basico">Contratar</button>
+      </div>
+
+      <!-- Plan Avanzado -->
+      <div class="border-2 border-accent rounded-lg shadow-lg p-6 flex flex-col">
+        <h3 class="text-2xl font-semibold text-gray-800 mb-4">Avanzado</h3>
+        <p class="text-gray-600 mb-6">Ideal para comercios con volumen medio de ventas.</p>
+        <ul class="mb-6 space-y-2">
+          <li>Comisión: 2.0% + $0.25/tx</li>
+          <li>$29/mes</li>
+          <li>Soporte 24/7</li>
+          <li>TPV Virtual + Prevención de fraude</li>
+        </ul>
+        <button data-plan="Avanzado" class="btn mt-auto" id="btn-contratar-avanzado">Contratar</button>
+      </div>
+
+      <!-- Plan Empresarial -->
+      <div class="border rounded-lg shadow p-6 flex flex-col">
+        <h3 class="text-2xl font-semibold text-gray-800 mb-4">Empresarial</h3>
+        <p class="text-gray-600 mb-6">Para grandes volúmenes y requerimientos personalizados.</p>
+        <ul class="mb-6 space-y-2">
+          <li>Comisión: 1.8% + $0.20/tx</li>
+          <li>$99/mes</li>
+          <li>Soporte dedicado</li>
+          <li>API Completa + Integraciones Avanzadas</li>
+        </ul>
+        <button data-plan="Empresarial" class="btn mt-auto" id="btn-contratar-empresarial">Contratar</button>
+      </div>
+    </div>
+
+    <!-- Modal de contratación -->
+    <div id="modal-contratar" class="modal">
+      <div class="modal-content">
+        <h3 id="modal-titulo" class="text-xl font-semibold text-gray-800 mb-4">Contratar Plan</h3>
+        <form id="form-contratar" action="/api/planes" method="POST" class="space-y-4">
+          <input type="hidden" name="plan" id="input-plan">
+          <div>
+            <label for="nombre-plan" class="block text-gray-700">Nombre:</label>
+            <input id="nombre-plan" name="nombre" type="text" class="input" required>
+          </div>
+          <div>
+            <label for="email-plan" class="block text-gray-700">Email:</label>
+            <input id="email-plan" name="email" type="email" class="input" required>
+          </div>
+          <div>
+            <label for="telefono-plan" class="block text-gray-700">Teléfono:</label>
+            <input id="telefono-plan" name="telefono" type="tel" class="input">
+          </div>
+          <button type="submit" class="btn">Enviar solicitud</button>
+          <button type="button" id="modal-cerrar" class="btn-secondary ml-2">Cancelar</button>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <!-- Copiar aquí footer.html -->
+
+  <script src="/js/main.js"></script>
+</body>
+</html>
