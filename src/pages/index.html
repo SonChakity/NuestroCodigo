@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Inicio – FinanciaPro Pagos</title>
+  <link rel="stylesheet" href="/css/styles.css" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header>
+    <nav class="container">
+      <a href="index.html" class="logo">FinanciaPro</a>
+      <div class="hamburger" id="btn-menu">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </div>
+      <div class="nav-links" id="menu-mobile">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="servicios.html">Servicios</a></li>
+          <li><a href="tarifas.html">Tarifas</a></li>
+          <li><a href="casos-exito.html">Casos de Éxito</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero sencillo -->
+  <section class="container text-center mt-4">
+    <h1>Procesa tus pagos sin complicaciones</h1>
+    <p class="mb-4">FinanciaPro Pagos simplifica tus cobros en línea con seguridad y rapidez.</p>
+    <a href="contacto.html#demo" class="btn">Solicita una demo gratuita</a>
+  </section>
+
+  <!-- Servicios Destacados -->
+  <section class="container mt-6">
+    <h2 class="text-center mb-4">Nuestros Servicios</h2>
+    <div class="grid-2">
+      <div class="card text-center">
+        <img src="/images/placeholder.png" alt="Pasarela de pagos" style="width:60px;height:60px;margin:auto;">
+        <h3 class="mt-2">Pasarela de Pagos</h3>
+        <p>Integración rápida y segura con tarjetas y medios de pago.</p>
+      </div>
+      <div class="card text-center">
+        <img src="/images/placeholder.png" alt="TPV Virtual" style="width:60px;height:60px;margin:auto;">
+        <h3 class="mt-2">TPV Virtual</h3>
+        <p>Procesa pagos desde tu panel, sin hardware adicional.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-container">
+      <div>&copy; 2025 FinanciaPro Pagos</div>
+      <div>
+        <a href="#">Política de Privacidad</a> |
+        <a href="#">Términos y Condiciones</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('btn-menu').addEventListener('click', () => {
+      const menu = document.getElementById('menu-mobile');
+      menu.style.display = (menu.style.display === 'flex') ? 'none' : 'flex';
+      menu.style.flexDirection = 'column';
+    });
+  </script>
+</body>
+</html>

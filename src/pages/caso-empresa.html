@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Caso de Éxito – {{ clienteNombre }}</title>
+  <link rel="stylesheet" href="/css/styles.css" />
+</head>
+<body>
+  <!-- Navbar -->
+  <header>
+    <nav class="container">
+      <a href="index.html" class="logo">FinanciaPro</a>
+      <div class="hamburger" id="btn-menu">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </div>
+      <div class="nav-links" id="menu-mobile">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="servicios.html">Servicios</a></li>
+          <li><a href="tarifas.html">Tarifas</a></li>
+          <li><a href="casos-exito.html">Casos de Éxito</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container py-6">
+    <article>
+      <h1>{{ clienteNombre }}</h1>
+      <h2>Desafío</h2>
+      <p>Descripción del problema inicial que tenía {{ clienteNombre }} antes de usar FinanciaPro Pagos.</p>
+
+      <h2>Solución</h2>
+      <p>Cómo implementamos nuestra pasarela de pagos y/o TPV virtual y qué funcionalidades se activaron.</p>
+
+      <h2>Resultados</h2>
+      <ul>
+        <li>Reducción del 50% en fraudes.</li>
+        <li>Aumento del 30% en aprobación de transacciones.</li>
+        <li>Mejora en la experiencia de usuario y tiempos de carga.</li>
+      </ul>
+
+      <h2>Testimonio</h2>
+      <blockquote>
+        “Desde que migramos a FinanciaPro Pagos, nuestras ventas en línea se dispararon.” – <strong>{{ clienteNombre }}</strong>
+      </blockquote>
+    </article>
+  </main>
+
+  <footer>
+    <div class="container footer-container">
+      <div>&copy; 2025 FinanciaPro Pagos</div>
+      <div>
+        <a href="#">Política de Privacidad</a> |
+        <a href="#">Términos y Condiciones</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/main.js"></script>
+  <script>
+    document.getElementById('btn-menu').addEventListener('click', () => {
+      const menu = document.getElementById('menu-mobile');
+      menu.style.display = (menu.style.display === 'flex') ? 'none' : 'flex';
+      menu.style.flexDirection = 'column';
+    });
+  </script>
+</body>
+</html>
