@@ -4,45 +4,68 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Casos de Éxito – FinanciaPro Pagos</title>
-  <meta name="description" content="Descubre cómo FinanciaPro Pagos ayudó a nuestros clientes a mejorar sus ventas y reducir fraudes en línea." />
   <link rel="stylesheet" href="/css/styles.css" />
 </head>
-<body class="flex flex-col min-h-screen">
+<body>
   <!-- Navbar -->
-  <!-- Copiar aquí navbar.html -->
+  <header>
+    <nav class="container">
+      <a href="index.html" class="logo">FinanciaPro</a>
+      <div class="hamburger" id="btn-menu">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </div>
+      <div class="nav-links" id="menu-mobile">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="servicios.html">Servicios</a></li>
+          <li><a href="tarifas.html">Tarifas</a></li>
+          <li><a href="casos-exito.html">Casos de Éxito</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
 
-  <main class="container mx-auto px-4 py-16">
-    <h2 class="text-3xl font-bold text-gray-800 text-center mb-8">Casos de Éxito</h2>
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-      <!-- Cada tarjeta -->
-      <div class="border rounded-lg shadow hover:shadow-lg transition">
-        <img src="/images/placeholder.png" alt="Cliente XYZ" class="w-full h-40 object-cover rounded-t-lg">
-        <div class="p-6">
-          <h3 class="text-xl font-semibold mb-2">Cliente XYZ</h3>
-          <p class="text-gray-600 mb-4">Cómo redujimos el índice de fraude en un 50% y mejoramos la aprobación de transacciones.</p>
-          <a href="caso-empresa.html?cliente=xyz" class="text-accent hover:underline">Leer más →</a>
-        </div>
+  <main class="container py-6">
+    <h2 class="text-center mb-4">Casos de Éxito</h2>
+    <div class="grid-2">
+      <div class="card text-center">
+        <img src="/images/placeholder.png" alt="Cliente XYZ" style="width:100%;height:150px;object-fit:cover;">
+        <h3 class="mt-2">Cliente XYZ</h3>
+        <p class="mb-4">Cómo redujimos el fraude en un 50% y mejoramos la aprobación de transacciones.</p>
+        <a href="caso-empresa.html?cliente=xyz">Leer más →</a>
       </div>
-      <!-- Agrega más tarjetas con distintos clientes (ABC, DEF, etc.) -->
-      <div class="border rounded-lg shadow hover:shadow-lg transition">
-        <img src="/images/placeholder.png" alt="Cliente ABC" class="w-full h-40 object-cover rounded-t-lg">
-        <div class="p-6">
-          <h3 class="text-xl font-semibold mb-2">Cliente ABC</h3>
-          <p class="text-gray-600 mb-4">Incrementamos las ventas en un 30% tras implementar nuestro TPV virtual.</p>
-          <a href="caso-empresa.html?cliente=abc" class="text-accent hover:underline">Leer más →</a>
-        </div>
+      <div class="card text-center">
+        <img src="/images/placeholder.png" alt="Cliente ABC" style="width:100%;height:150px;object-fit:cover;">
+        <h3 class="mt-2">Cliente ABC</h3>
+        <p class="mb-4">Incrementamos las ventas un 30% al implementar nuestro TPV.</p>
+        <a href="caso-empresa.html?cliente=abc">Leer más →</a>
       </div>
-      <!-- etc. -->
     </div>
-    <section class="mt-12 text-center">
-      <p class="text-gray-700 mb-4">¿Quieres ser nuestro próximo caso de éxito?</p>
+    <section class="mt-4 text-center">
+      <p class="mb-4">¿Quieres ser nuestro próximo caso de éxito?</p>
       <a href="contacto.html#caso" class="btn">Contáctanos</a>
     </section>
   </main>
 
-  <!-- Footer -->
-  <!-- Copiar aquí footer.html -->
+  <footer>
+    <div class="container footer-container">
+      <div>&copy; 2025 FinanciaPro Pagos</div>
+      <div>
+        <a href="#">Política de Privacidad</a> |
+        <a href="#">Términos y Condiciones</a>
+      </div>
+    </div>
+  </footer>
 
   <script src="/js/main.js"></script>
+  <script>
+    document.getElementById('btn-menu').addEventListener('click', () => {
+      const menu = document.getElementById('menu-mobile');
+      menu.style.display = (menu.style.display === 'flex') ? 'none' : 'flex';
+      menu.style.flexDirection = 'column';
+    });
+  </script>
 </body>
 </html>

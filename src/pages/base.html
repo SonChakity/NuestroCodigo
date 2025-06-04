@@ -7,19 +7,14 @@
   <meta name="description" content="{{ description }}" />
   <link rel="stylesheet" href="/css/styles.css" />
 </head>
-<body class="flex flex-col min-h-screen">
+<body>
 
-  <!-- Navbar -->
-  <!-- Aquí inyectarás el contenido de src/components/navbar.html -->
   {% include "../components/navbar.html" %}
 
-  <!-- Contenido principal -->
-  <main class="flex-grow">
+  <main class="container py-6">
     {{ content }}
   </main>
 
-  <!-- Footer -->
-  <!-- Aquí inyectarás el contenido de src/components/footer.html -->
   {% include "../components/footer.html" %}
 
 </body>

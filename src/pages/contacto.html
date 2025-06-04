@@ -4,102 +4,115 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contacto – FinanciaPro Pagos</title>
-  <meta name="description" content="Contáctanos para consultas generales, soporte técnico o solicitar una demo de FinanciaPro Pagos." />
   <link rel="stylesheet" href="/css/styles.css" />
 </head>
-<body class="flex flex-col min-h-screen">
+<body>
   <!-- Navbar -->
-  <!-- Copiar navbar.html -->
+  <header>
+    <nav class="container">
+      <a href="index.html" class="logo">FinanciaPro</a>
+      <div class="hamburger" id="btn-menu">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </div>
+      <div class="nav-links" id="menu-mobile">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="servicios.html">Servicios</a></li>
+          <li><a href="tarifas.html">Tarifas</a></li>
+          <li><a href="casos-exito.html">Casos de Éxito</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
 
-  <main class="container mx-auto px-4 py-16">
-    <h2 class="text-3xl font-bold text-gray-800 text-center mb-8">Contáctanos</h2>
+  <main class="container py-6">
+    <h2 class="text-center mb-4">Contáctanos</h2>
 
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-      <!-- Formulario de Contacto General -->
-      <div id="general" class="border rounded-lg shadow p-6">
-        <h3 class="text-2xl font-semibold mb-4">Contacto General</h3>
-        <form id="form-general" action="/api/contacto" method="POST" class="space-y-4">
+    <div class="grid-2">
+      <div id="general">
+        <h3 class="mt-2">Contacto General</h3>
+        <form id="form-general" action="/api/contacto" method="POST" class="grid-2">
           <input type="hidden" name="tipo" value="general">
           <div>
-            <label for="nombre-general" class="block text-gray-700">Nombre:</label>
+            <label for="nombre-general">Nombre:</label>
             <input id="nombre-general" name="nombre" type="text" class="input" required>
           </div>
           <div>
-            <label for="email-general" class="block text-gray-700">Email:</label>
+            <label for="email-general">Email:</label>
             <input id="email-general" name="email" type="email" class="input" required>
           </div>
           <div>
-            <label for="telefono-general" class="block text-gray-700">Teléfono:</label>
+            <label for="telefono-general">Teléfono:</label>
             <input id="telefono-general" name="telefono" type="tel" class="input">
           </div>
           <div>
-            <label for="mensaje-general" class="block text-gray-700">Mensaje:</label>
+            <label for="mensaje-general">Mensaje:</label>
             <textarea id="mensaje-general" name="mensaje" rows="4" class="input" required></textarea>
           </div>
           <button type="submit" class="btn">Enviar</button>
         </form>
       </div>
 
-      <!-- Formulario de Soporte Técnico -->
-      <div id="soporte" class="border rounded-lg shadow p-6">
-        <h3 class="text-2xl font-semibold mb-4">Soporte Técnico</h3>
-        <form id="form-soporte" action="/api/soporte" method="POST" enctype="multipart/form-data" class="space-y-4">
+      <div id="soporte">
+        <h3 class="mt-2">Soporte Técnico</h3>
+        <form id="form-soporte" action="/api/soporte" method="POST" enctype="multipart/form-data" class="grid-2">
           <input type="hidden" name="tipo" value="soporte">
           <div>
-            <label for="nombre-soporte" class="block text-gray-700">Nombre:</label>
+            <label for="nombre-soporte">Nombre:</label>
             <input id="nombre-soporte" name="nombre" type="text" class="input" required>
           </div>
           <div>
-            <label for="email-soporte" class="block text-gray-700">Email:</label>
+            <label for="email-soporte">Email:</label>
             <input id="email-soporte" name="email" type="email" class="input" required>
           </div>
           <div>
-            <label for="telefono-soporte" class="block text-gray-700">Teléfono:</label>
+            <label for="telefono-soporte">Teléfono:</label>
             <input id="telefono-soporte" name="telefono" type="tel" class="input">
           </div>
           <div>
-            <label for="idcliente-soporte" class="block text-gray-700">ID de Cliente:</label>
+            <label for="idcliente-soporte">ID de Cliente:</label>
             <input id="idcliente-soporte" name="idCliente" type="text" class="input" required>
           </div>
           <div>
-            <label for="mensaje-soporte" class="block text-gray-700">Descripción del problema:</label>
+            <label for="mensaje-soporte">Descripción del problema:</label>
             <textarea id="mensaje-soporte" name="mensaje" rows="4" class="input" required></textarea>
           </div>
           <div>
-            <label for="archivo-soporte" class="block text-gray-700">Adjuntar archivo (opcional):</label>
-            <input id="archivo-soporte" name="archivo" type="file" class="block w-full">
+            <label for="archivo-soporte">Adjuntar archivo (opcional):</label>
+            <input id="archivo-soporte" name="archivo" type="file" class="input">
           </div>
           <button type="submit" class="btn">Enviar solicitud</button>
         </form>
       </div>
 
-      <!-- Formulario de Solicitar Demo -->
-      <div id="demo" class="border rounded-lg shadow p-6 lg:col-span-2">
-        <h3 class="text-2xl font-semibold mb-4">Solicitar Demo</h3>
-        <form id="form-demo" action="/api/demo" method="POST" class="space-y-4">
+      <div id="demo" class="grid-2">
+        <h3 class="mt-2">Solicitar Demo</h3>
+        <form id="form-demo" action="/api/demo" method="POST" class="grid-2">
           <input type="hidden" name="tipo" value="demo">
           <div>
-            <label for="nombre-demo" class="block text-gray-700">Nombre:</label>
+            <label for="nombre-demo">Nombre:</label>
             <input id="nombre-demo" name="nombre" type="text" class="input" required>
           </div>
           <div>
-            <label for="email-demo" class="block text-gray-700">Email:</label>
+            <label for="email-demo">Email:</label>
             <input id="email-demo" name="email" type="email" class="input" required>
           </div>
           <div>
-            <label for="telefono-demo" class="block text-gray-700">Teléfono:</label>
+            <label for="telefono-demo">Teléfono:</label>
             <input id="telefono-demo" name="telefono" type="tel" class="input">
           </div>
           <div>
-            <label for="negocio-demo" class="block text-gray-700">Tipo de negocio:</label>
+            <label for="negocio-demo">Tipo de negocio:</label>
             <input id="negocio-demo" name="tipoNegocio" type="text" class="input" required>
           </div>
           <div>
-            <label for="volumen-demo" class="block text-gray-700">Volumen aproximado de transacciones mensuales:</label>
+            <label for="volumen-demo">Volumen aproximado de transacciones mensuales:</label>
             <input id="volumen-demo" name="volumen" type="number" class="input" required>
           </div>
           <div>
-            <label for="mensaje-demo" class="block text-gray-700">Comentarios adicionales:</label>
+            <label for="mensaje-demo">Comentarios adicionales:</label>
             <textarea id="mensaje-demo" name="mensaje" rows="4" class="input"></textarea>
           </div>
           <button type="submit" class="btn">Enviar solicitud de demo</button>
@@ -107,18 +120,31 @@
       </div>
     </div>
 
-    <!-- Mapa embebido -->
-    <section class="mt-12">
-      <h3 class="text-2xl font-semibold text-gray-800 mb-4">Nuestra Oficina</h3>
-      <div class="w-full h-64 rounded overflow-hidden">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!..." width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    <section class="mt-4">
+      <h3>Nuestra Oficina</h3>
+      <div style="width:100%;height:250px;">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!..." width="100%" height="100%" style="border:0;" loading="lazy"></iframe>
       </div>
     </section>
   </main>
 
-  <!-- Footer -->
-  <!-- Copiar footer.html -->
+  <footer>
+    <div class="container footer-container">
+      <div>&copy; 2025 FinanciaPro Pagos</div>
+      <div>
+        <a href="#">Política de Privacidad</a> |
+        <a href="#">Términos y Condiciones</a>
+      </div>
+    </div>
+  </footer>
 
   <script src="/js/main.js"></script>
+  <script>
+    document.getElementById('btn-menu').addEventListener('click', () => {
+      const menu = document.getElementById('menu-mobile');
+      menu.style.display = (menu.style.display === 'flex') ? 'none' : 'flex';
+      menu.style.flexDirection = 'column';
+    });
+  </script>
 </body>
 </html>

@@ -5,9 +5,7 @@
   "main": "server/app.js",
   "scripts": {
     "start": "node server/app.js",
-    "dev": "nodemon server/app.js",
-    "build:css": "postcss src/input.css -o public/css/styles.css",
-    "watch:css": "npx tailwindcss -i ./src/input.css -o ./public/css/styles.css --watch"
+    "dev": "nodemon server/app.js"
   },
   "author": "FinanciaPro",
   "license": "MIT",
@@ -25,9 +23,6 @@
     "express-rate-limit": "^7.0.0"
   },
   "devDependencies": {
-    "tailwindcss": "^3.4.2",
-    "postcss": "^8.4.21",
-    "autoprefixer": "^10.4.13",
     "nodemon": "^2.0.22"
   }
 }
