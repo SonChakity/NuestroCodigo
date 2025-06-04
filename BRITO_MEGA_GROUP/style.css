@@ -1,0 +1,182 @@
+:root {
+    --fondo-principal: #0f172a;
+    --fondo-alterno: #1e293b;
+    --texto-principal: #ffffff;
+    --texto-secundario: #cbd5e1;
+    --acento: #38bdf8;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--fondo-principal);
+    color: var(--texto-principal);
+    line-height: 1.6;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--fondo-alterno);
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+header h1 {
+    font-size: 1.5rem;
+    color: var(--acento);
+}
+
+header ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+header a {
+    color: var(--texto-secundario);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+header a:hover {
+    color: var(--acento);
+}
+
+.hero {
+    background-color: var(--fondo-principal);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 4rem;
+    opacity: 0;
+    animation: fadeInDown 1s forwards;
+}
+
+.hero-content img {
+    margin-top: 1rem;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.section {
+    padding: 5rem 1rem;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(20px);
+    background-color: var(--fondo-alterno);
+    margin-top: 2rem;
+    animation: fadeInUp 1s forwards;
+}
+
+.section:nth-of-type(even) {
+    background-color: var(--fondo-principal);
+}
+
+.section img {
+    margin-top: 1rem;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+input, textarea {
+    padding: 0.5rem;
+    border: none;
+    border-radius: 4px;
+}
+
+button {
+    padding: 0.7rem;
+    border: none;
+    border-radius: 20px;
+    background-color: var(--acento);
+    color: var(--fondo-principal);
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0ea5e9;
+    transform: scale(1.05);
+}
+
+footer {
+    text-align: center;
+    padding: 2rem 1rem;
+    background-color: var(--fondo-alterno);
+}
+
+.redes a {
+    color: var(--texto-secundario);
+    margin: 0 0.5rem;
+    font-size: 1.5rem;
+    transition: transform 0.3s, color 0.3s;
+}
+
+.redes a:hover {
+    transform: scale(1.2);
+    color: var(--acento);
+}
+
+.active {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 768px) {
+    header ul {
+        flex-direction: column;
+        background-color: var(--fondo-principal);
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        display: none;
+    }
+
+    header ul.open {
+        display: flex;
+    }
+}
