@@ -1,0 +1,5 @@
+arduino
+ton-client
+pyyaml
+python-dotenv
+uvloop; sys_platform != "win32"
