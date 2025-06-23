@@ -1,0 +1,33 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #fafafa;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#game-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#board {
+  border: 2px solid #333;
+  background: #fff;
+}
+
+#ui {
+  margin-top: 10px;
+  text-align: center;
+}
+
+#dice {
+  font-size: 24px;
+  margin: 5px;
+}
+
+#message {
+  margin-top: 10px;
+  min-height: 20px;
+}
