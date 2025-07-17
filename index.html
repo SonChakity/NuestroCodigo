@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Plan 50-30-20</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>💰 Mi Plan 50-30-20</h1>
+            <p class="subtitle">Gestiona tu presupuesto con la regla financiera más efectiva</p>
+        </header>
+
+        <main class="main-content">
+            <!-- Tarjetas de presupuesto -->
+            <section class="budget-cards">
+                <div class="card card-necesidades">
+                    <div class="card-header">
+                        <h3>🏠 Necesidades</h3>
+                        <span class="percentage">50%</span>
+                    </div>
+                    <div class="card-body">
+                        <div class="amount" id="necesidades-amount">€0</div>
+                        <p class="description">Gastos esenciales: alquiler, comida, transporte</p>
+                    </div>
+                </div>
+
+                <div class="card card-deseos">
+                    <div class="card-header">
+                        <h3>🎯 Deseos</h3>
+                        <span class="percentage">30%</span>
+                    </div>
+                    <div class="card-body">
+                        <div class="amount" id="deseos-amount">€0</div>
+                        <p class="description">Entretenimiento, hobbies, compras no esenciales</p>
+                    </div>
+                </div>
+
+                <div class="card card-ahorro">
+                    <div class="card-header">
+                        <h3>💎 Ahorro</h3>
+                        <span class="percentage">20%</span>
+                    </div>
+                    <div class="card-body">
+                        <div class="amount" id="ahorro-amount">€0</div>
+                        <p class="description">Inversiones, emergencias, objetivos futuros</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Formulario para añadir gastos -->
+            <section class="expense-form">
+                <h3>➕ Añadir Gasto</h3>
+                <form id="expense-form">
+                    <div class="form-group">
+                        <label for="categoria">Categoría:</label>
+                        <select id="categoria" required>
+                            <option value="">Selecciona una categoría</option>
+                            <option value="necesidades">🏠 Necesidades</option>
+                            <option value="deseos">🎯 Deseos</option>
+                            <option value="ahorro">💎 Ahorro</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="monto">Monto (€):</label>
+                        <input type="number" id="monto" min="0" step="0.01" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Añadir Gasto</button>
+                </form>
+            </section>
+
+            <!-- Lista de transacciones -->
+            <section class="transactions">
+                <h3>📋 Transacciones del Mes</h3>
+                <div id="transactions-list" class="transactions-list">
+                    <!-- Las transacciones se cargarán aquí -->
+                </div>
+            </section>
+        </main>
+
+        <!-- Botones de acción -->
+        <div class="action-buttons">
+            <button id="end-month-btn" class="btn btn-success">📅 Mes Terminado</button>
+            <button id="reset-plan-btn" class="btn btn-secondary">🔄 Reiniciar Plan</button>
+        </div>
+    </div>
+
+    <!-- Modal para configurar salario -->
+    <div id="salary-modal" class="modal">
+        <div class="modal-content">
+            <h2>🚀 ¡Bienvenido a tu Plan 50-30-20!</h2>
+            <p>Para comenzar, necesitamos conocer tu salario mensual neto.</p>
+            <form id="salary-form">
+                <div class="form-group">
+                    <label for="salary-input">Salario mensual neto (€):</label>
+                    <input type="number" id="salary-input" min="0" step="0.01" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Crear Mi Plan</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Mensajes de notificación -->
+    <div id="notification" class="notification hidden">
+        <span id="notification-text"></span>
+        <button id="notification-close">×</button>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
